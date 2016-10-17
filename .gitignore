@@ -40,5 +40,5 @@ build/*
 *.app
 
 # folders 
-./1_clnt_srv_ip6/build/
+1_clnt_srv_ip6/build/
 
