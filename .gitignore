@@ -5,6 +5,10 @@ build/*
 # QtCreator
 *.txt.user
 *.pro.user
+*.cpp.autosave
+
+# kate
+*.kate-swp
 
 # Compiled Object files
 *.slo
@@ -34,3 +38,7 @@ build/*
 *.exe
 *.out
 *.app
+
+# folders 
+./1_clnt_srv_ip6/build/
+

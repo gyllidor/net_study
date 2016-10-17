@@ -4,6 +4,7 @@
 #include <netinet/in.h>
 #include <strings.h>
 #include <arpa/inet.h>
+#include <stdio.h>
 
 int main(int argc, char *argv[])
 {
@@ -26,6 +27,7 @@ int main(int argc, char *argv[])
     bzero(&servaddr, sizeof(servaddr));
     servaddr.sin6_family = AF_INET6;
     servaddr.sin6_port = htons(13);
+
     if (inet_pton(AF_INET6, serv_ip.c_str(), &servaddr.sin6_addr) <= 0)
     {
         std::cerr << "inet_pton failed" << std::endl;
@@ -34,6 +36,7 @@ int main(int argc, char *argv[])
 
     if (connect(sockfd, reinterpret_cast<sockaddr*>(&servaddr), sizeof(servaddr)) < 0)
     {
+        perror(nullptr);
         std::cerr << "connect failed" << std::endl;
         std::exit(EXIT_FAILURE);
     }
