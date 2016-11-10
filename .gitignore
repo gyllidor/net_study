@@ -39,6 +39,9 @@ build/*
 *.out
 *.app
 
+# build
+*.Makefile
+
 # folders 
 1_clnt_srv_ip6/build/
 
