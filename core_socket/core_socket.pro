@@ -7,4 +7,5 @@ SOURCES += main.cpp \
     SocketFunctions.cpp
 
 HEADERS += \
-    SocketFunctions.h
+    SocketFunctions.h \
+    BrrLogger.h

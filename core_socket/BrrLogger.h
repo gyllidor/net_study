@@ -13,6 +13,7 @@
 #include <cstdio>
 #include <cstdlib>
 #include <string.h>
+#include <errno.h>
 
 namespace brr
 {

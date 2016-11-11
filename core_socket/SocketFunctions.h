@@ -4,6 +4,28 @@
 #include <sys/socket.h>
 #include <sys/types.h>
 
+#include <exception>
+#include <string>
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
+namespace Net
+{
+namespace Exception
+{
+class Socket : public std::exception
+{
+public:
+    Socket(const std::string& i_exception_msg);
+    ~Socket() throw{};
+
+    const char* what() const throw;
+
+private:
+    const std::string m_exception_msg;
+};
+} // namespace Exception
+} // namespace Net
+
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 namespace Net
 {
